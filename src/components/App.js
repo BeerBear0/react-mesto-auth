@@ -1,14 +1,22 @@
 import React from "react";
+import { CurrentUserContext } from "../contexts/CurrentUserContext";
+import { api } from "../utils/api";
+
 import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
+
+import Login from "./Login";
+import Register from "./Register";
+import Infotooltip from "./InfoTooltip";
+import ProtectedRoute from "./ProtectedRoute";
+
 import ImagePopup from "./ImagePopup";
 import PopupWithForm from "./PopupWithForm";
-import { api } from "../utils/api";
 import EditProfilePopup from "./EditProfilePopup";
 import EditAvatarPopup from "./EditAvatarPopup";
 import AddPlacePopup from "./AddPlacePopup";
-import { CurrentUserContext } from "../contexts/CurrentUserContext";
+
 
 function App()
 

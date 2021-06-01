@@ -1,9 +1,23 @@
 import React, {useState} from 'react'
-import {Link, link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './login.css'
 
 function Register({ onRegister}) {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
 
+    function handleEmailChange (evt) {
+        setEmail(evt.target.value)
+    }
+
+    function handlePasswordChange (evt) {
+        setPassword(evt.target.value)
+    }
+
+    function handleSubmit(evt) {
+        evt.preventDefault();
+        onRegister(email, password)
+    }
 
     return (
         <form className="login__container" onSubmit={handleSubmit}>
