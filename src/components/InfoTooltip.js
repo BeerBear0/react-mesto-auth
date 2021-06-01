@@ -3,7 +3,7 @@ import success from '../images/Success.png'
 import fail from '../images/Fail.png'
 import './Login.css'
 
-function Infotooltip({ isOpen, onClose, isSuccess}) {
+function InfoTooltip({ isOpen, onClose, isSuccess}) {
 
     return (
         <div className={`popup ${isOpen && 'popup__opened'}`}>
@@ -17,4 +17,4 @@ function Infotooltip({ isOpen, onClose, isSuccess}) {
         </div>
     )
 }
- export default Infotooltip
+ export default InfoTooltip

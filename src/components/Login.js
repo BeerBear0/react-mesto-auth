@@ -2,7 +2,7 @@ import React from "react"
 import  "./Login.css"
 
 
-function Login({ onLogin } ) {
+function Login ({ onLogin } ) {
     const [email, setEmail] = React.useState('');
     const [password,setPassword] = React.useState('');
 
@@ -29,7 +29,7 @@ function Login({ onLogin } ) {
                 type="email"
                 name="email"
                 placeholder="Email"
-                required={}
+                required
             />
             <input
                 onChange={handlePasswordChange}
