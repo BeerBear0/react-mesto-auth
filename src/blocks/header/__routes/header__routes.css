@@ -1,0 +1,9 @@
+.header__routes {
+    margin: 6px 10px 37px 0;
+}
+
+@media(min-width: 0px) and (max-width: 425px) {
+    .header__routes {
+        display: none;
+    }
+}
