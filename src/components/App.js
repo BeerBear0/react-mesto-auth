@@ -160,12 +160,12 @@ function App()
                     if(res) {
                         setEmail(res.data.email);
                         setLoggedIn(true);
-                        history.push('/sign-in');
+                        history.push('/');
                     }
                 })
                 .catch(err => {
                     console.log(err)
-                    history.push('./sign-in')
+                    history.push('/sign-in')
                 })
         }
     }

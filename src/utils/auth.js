@@ -53,7 +53,7 @@ export const register = (email, password) => {
     }
 
     export const getContent = (token) => {
-        return fetch(`${baseAuthUrl}/user/me`, {
+        return fetch(`${baseAuthUrl}/users/me`, {
             method: 'GET',
             headers: {
                 'Accept': 'application/json',
