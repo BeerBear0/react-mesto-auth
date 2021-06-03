@@ -1,7 +1,6 @@
 import React from "react";
 import logo from "../images/Vector.svg";
 import {Link, Route} from 'react-router-dom'
-import './Login.css'
 
 function Header({ onSignOut, email, loggedIn}) {
     const [dropDownIsOpen, setDropDownIsOpen] = React.useState('');

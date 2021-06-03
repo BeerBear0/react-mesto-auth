@@ -1,7 +1,7 @@
 import React from 'react'
 import success from '../images/Success.png'
 import fail from '../images/Fail.png'
-import './Login.css'
+
 
 function InfoTooltip({ isOpen, onClose, isSuccess}) {
 
