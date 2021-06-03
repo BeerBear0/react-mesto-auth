@@ -191,6 +191,7 @@ function App()
                     <Route path='/sign-up'>
                         <Register onRegister={handleRegister} />
                     </Route>
+
                     <ProtectedRoute
                         exact path='/'
                         loggedIn={loggedIn}

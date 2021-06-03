@@ -4,7 +4,7 @@ import  "./Login.css"
 
 function Login ({ onLogin } ) {
     const [email, setEmail] = React.useState('');
-    const [password,setPassword] = React.useState('');
+    const [password, setPassword] = React.useState('');
 
     function handleEmailChange (evt) {
         setEmail(evt.target.value)
@@ -40,6 +40,9 @@ function Login ({ onLogin } ) {
                 placeholder="Пароль"
                 required
             />
+            <button
+                className="popup__submit login__submit"
+                type="submit">Войти</button>
         </form>
     )
 }

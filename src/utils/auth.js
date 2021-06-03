@@ -1,7 +1,7 @@
 const baseAuthUrl = 'https://auth.nomoreparties.co'
 
 export const register = (email, password) => {
-    return fetch(`${baseAuthUrl}/sign-up`, {
+    return fetch(`${baseAuthUrl}/signup`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ password, email })
@@ -22,7 +22,7 @@ export const register = (email, password) => {
 };
 
     export const authorize = (email, password) => {
-        return fetch(`${baseAuthUrl}/sign-in`, {
+        return fetch(`${baseAuthUrl}/signin`, {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email, password })

@@ -1,19 +1,19 @@
 .login__title {
     color: #fff;
     margin: 0 auto;
-    padding-bottom: 50px;
     text-align: center;
 }
 
 .login__input {
     background: none;
-    margin-top: 50px;
+    margin: 50px 0 0 0;
     padding-bottom: 0;
     border-bottom: 2px solid #cccccc;
     line-height: 30px;
     color: white;
     font-size: 14px;
     font-weight: 500;
+
 }
 .login__input:nth-last-of-type {
     margin-top: 30px;
@@ -178,6 +178,26 @@
     cursor: pointer;
 }
 
+.header__link {
+    text-decoration: none;
+    width: 115px;
+    color: #fff;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    align-self: center;
+}
+
+.header__link:hover {
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 910px) {
+    .header__link {
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
 .header__button:hover {
     opacity: 0.6;
 }
@@ -188,4 +208,99 @@
         padding-bottom: 40px;
         align-self: center;
     }
+}
+
+.header__dropdown {
+    display: none;
+    background-image: url("../images/dropdown.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+    border: none;
+    padding: 0;
+    background-color: black;
+    align-self: flex-end;
+    margin: 7px 10px 31px 0;
+}
+
+.header__dropdown:hover {
+    cursor: pointer;
+    opacity: .6;
+    transition: opacity .2s linear;
+}
+
+@media screen and (max-width: 320px) {
+    .header__dropdown {
+        display: block;
+    }
+    .header__dropdown:focus {
+        outline: none;
+    }
+}
+
+
+.header__dropdown_active {
+    background-image: url("../images/CloseIcon.svg");
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+}
+
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 20px;
+    margin-top: 28px;
+    width: calc(100% - 50px);
+}
+
+
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    padding-top:  40px;
+    border-top: 1px solid #545454 ;
+    opacity: .7;
+}
+
+.header__logo {
+    object-position: center;
+    object-fit: fill;
+    width: 142px;
+    height: 34px;
+}
+
+@media screen and (max-width: 910px) {
+    .header__logo {
+
+    }
+}
+
+@media (max-width: 550px) {
+    .header__logo {
+        max-width: 103px;
+        max-height: 24px;
+    }
+}
+
+.header__routes {
+    align-self: flex-end;
+}
+
+@media(min-width: 0px) and (max-width: 320px) {
+    .header__routes {
+        display: none;
+    }
+
+}.header__wrapper {
+     display: none;
+ }
+
+.header__wrapper_type_active {
+    display: block;
+
 }
