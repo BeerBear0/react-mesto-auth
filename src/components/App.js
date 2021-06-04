@@ -129,7 +129,7 @@ function App()
                 }
             })
             .catch(err => {
-                console.log(err.message)
+             console.log({message: "Некорректно заполнено одно из полей"});
             })
     }
 
@@ -233,12 +233,12 @@ function App()
                     btnText="Да" />
 
 
-                {selectedCard && <ImagePopup
+                <ImagePopup
                     name={`open-imagePopup`}
                     card={selectedCard}
                     // isOpen={isImagePopupOpen}
                     onClose={closeAllPopup}
-                />}
+                />
 
 
                 <InfoTooltip

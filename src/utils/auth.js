@@ -7,18 +7,14 @@ export const register = (email, password) => {
         body: JSON.stringify({ password, email })
     })
         .then((res) => {
-            try {
                 if (res.status !== 400){
                     return res.json();
                 }
-            } catch(err) {
-                throw new Error('Некорректно заполнено одно из полей')
             }
-        })
+        )
         .then((res) => {
             return res;
         })
-        .catch((err) => console.log({message: "Некорректно заполнено одно из полей"}));
 };
 
     export const authorize = (email, password) => {
@@ -28,7 +24,6 @@ export const register = (email, password) => {
             body: JSON.stringify({ email, password })
         })
             .then(res => {
-                try {
                     if (res.ok) {
                         return res.json();
                     }
@@ -38,10 +33,6 @@ export const register = (email, password) => {
                     if (res.status === 401) {
                         throw new Error('Пользователь с email не найден')
                     }
-                } catch (e) {
-                    console.log(e)
-                    return e
-                }
             })
             .then(data => {
                 if (data.token) {
@@ -49,7 +40,6 @@ export const register = (email, password) => {
                     return data
                 }
             })
-            .catch((err) => {return Promise.reject(err.message)})
     }
 
     export const getContent = (token) => {
@@ -62,7 +52,6 @@ export const register = (email, password) => {
             }
         })
             .then(res => {
-                try {
                     if (res.status === 200) {
                         return res.json();
                     }
@@ -72,10 +61,6 @@ export const register = (email, password) => {
                     if (res.status === 401) {
                         throw new Error('Переданный токкен некорректен')
                     }
-                } catch (e) {
-                    console.log(e)
-                    return e
-                }
             })
             .then(data => {
                 return data
