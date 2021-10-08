@@ -5,6 +5,7 @@
     background-color: rgba(0, 0, 0, 0);
     border: none;
     background-image: url("../../../images/Group.svg");
+    background-repeat: no-repeat;
 }
 
 .element__like-btn:hover {

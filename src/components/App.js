@@ -56,6 +56,7 @@ function App()
             })
             .catch(err => console.error(err));
     }
+    
     function handleCardDelete(card) {
         api.deleteCard(card._id)
             .then(_ => {
